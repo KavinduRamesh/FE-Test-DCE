@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: 'update', component: UserUpdateComponent },
   { path: 'user-list', component: UserListComponent },
   { path: 'note', component: NoteComponent },
+  { path: 'update/:id', component: UserUpdateComponent }, 
+
 ];
 
 @NgModule({

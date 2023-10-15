@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from '../../user.service'; 
 import { MatSnackBar } from '@angular/material/snack-bar'; 
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-user-list',
@@ -10,13 +12,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'first_name', 'last_name', 'email', 'delete'];
+  displayedColumns: string[] = ['id', 'first_name', 'last_name', 'email', 'delete', 'update'];
   userList!: MatTableDataSource<any>;
 
   constructor(
     private http: HttpClient,
     private userService: UserService,
-    private snackBar: MatSnackBar 
+    private snackBar: MatSnackBar, 
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -46,5 +49,8 @@ export class UserListComponent implements OnInit {
         console.error('Error deleting user:', error);
       }
     );
+  }
+  navigateToUpdate(userId: number) {
+    this.router.navigate(['/update', userId]);
   }
 }
