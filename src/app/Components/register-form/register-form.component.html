@@ -1,0 +1,27 @@
+<div class="registration-container">
+  <mat-card class="registration-card">
+    <mat-card-title class="registration-title">{{UserRegistration}}</mat-card-title>
+    <mat-card-content>
+      <form #registrationForm="ngForm" (submit)="onSubmit()">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="First Name" [(ngModel)]="formData.firstName" name="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Last Name" [(ngModel)]="formData.lastName" name="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" [(ngModel)]="formData.email" name="email" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="Password" [(ngModel)]="formData.password" name="password" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="register-button" type="submit" [disabled]="!registrationForm.form.valid">{{ submitButtonText }}</button>
+      </form>
+      <div *ngIf="registrationResponse">{{ registrationResponse }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>

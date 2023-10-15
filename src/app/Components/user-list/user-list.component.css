@@ -1,0 +1,55 @@
+.user-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .user-list-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: #3F51B5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .mat-card-title.mat-indigo {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .mat-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  .mat-header-cell {
+    background-color: #303F9F; 
+  }
+  
+  .mat-cell:nth-child(odd) {
+    background-color: #3949AB; 
+  }
+  
+  .mat-row:hover {
+    background-color: #536DFE;
+  }
+  
+  .mat-paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    background-color: #3F51B5; 
+    color: #fff;
+  }
+  
