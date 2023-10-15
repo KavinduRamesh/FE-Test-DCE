@@ -6,6 +6,7 @@ import { UserListComponent } from './Components/user-list/user-list.component';
 import { NoteComponent } from './Components/note/note.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'register', component: RegisterFormComponent },
   { path: 'update', component: UserUpdateComponent },
   { path: 'user-list', component: UserListComponent },
